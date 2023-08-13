@@ -1,0 +1,746 @@
+@font-face {
+  font-family: "Montserrat-medium";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../montserrat n gothic/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../montserrat n gothic/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat-semibold";
+  font-weight: 600;
+  font-display: swap;
+  src: url("../montserrat n gothic/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Gothic";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../montserrat n gothic/Gothic.ttf");
+}
+
+$mint-blue: rgba(141, 211, 187, 1);
+%button-mint {
+  background-color: $mint-blue;
+  border: 1px solid $mint-blue;
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat";
+  border: transparent;
+  border-radius: 4px;
+  padding: 16px 16px 16px 16px;
+  font-weight: 700;
+  &:active {
+    transform: scale(0.8, 0.8);
+  }
+  img {
+    align-items: center;
+    padding-right: 4px;
+  }
+}
+%button-mint-border {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid $mint-blue;
+  padding: 10px 14px 10px 14px;
+  &:active {
+    transform: scale(0.8, 0.8);
+  }
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  p {
+    margin: 0%;
+  }
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1380px;
+
+    .bgImage {
+      background-image: url(../img/Title.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding-top: 10px;
+      padding-bottom: 100px;
+    }
+  }
+  background-color: rgba(250, 251, 252, 1);
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  width: 100%;
+  max-width: 1380px;
+
+  display: flex;
+  color: white;
+  padding: 20px 0px 20px 0px;
+  justify-content: space-between;
+  font-family: "Montserrat-semibold";
+  font-size: 14px;
+  div:first-child {
+    display: flex;
+
+    div {
+      display: flex;
+      align-items: center;
+      p {
+        padding-left: 4px;
+      }
+    }
+    div:last-child {
+      padding-left: 32px;
+    }
+  }
+  .headerDiv {
+    margin-left: 20px;
+  }
+  button:first-child {
+    color: white;
+    background-color: transparent;
+    border: solid transparent;
+    font-family: "Montserrat-semibold";
+
+    &:active {
+      transform: scale(0.8, 0.8);
+    }
+  }
+  button:last-child {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 7px;
+    padding: 10px 18px 10px 18px;
+    margin-right: 20px;
+    font-family: "Montserrat-semibold";
+    &:active {
+      transform: scale(0.8, 0.8);
+    }
+  }
+}
+
+.headline {
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 150px;
+  h2 {
+    font-size: 45px;
+    margin: 0%;
+  }
+  h1 {
+    font-size: 80px;
+    margin: 0%;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+.navFlightsBlock {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -100px;
+  .navFlightsSection {
+    background-color: white;
+    width: 100%;
+    max-width: 1232px;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    .buttonsSection {
+      display: flex;
+      margin: 15px 0px 0px 24px;
+      > div:hover {
+        border-bottom: 3px solid $mint-blue;
+      }
+      .buttonFlightsSection {
+        padding: 20px 32px 22px 0px;
+      }
+      .buttonStaysSection {
+        padding: 20px 32px 22px 32px;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: transparent;
+        font-family: "Montserrat-semibold";
+        font-size: 16px;
+
+        img {
+          padding-right: 4px;
+        }
+      }
+    }
+
+    .fieldsets {
+      margin-top: 48px;
+      width: 100%;
+      display: flex;
+      > div {
+        margin-left: 5px;
+        width: 100%;
+        display: flex;
+        > div {
+          display: flex;
+          fieldset {
+            width: 322px;
+            margin-left: 23px;
+            padding: 0px;
+
+            color: rgba(121, 116, 126, 1);
+            border-radius: 5px;
+            border: 1px solid rgba(121, 116, 126, 1);
+            input {
+              width: 98%;
+              height: 30px;
+              border: transparent;
+              &:active,
+              &:hover,
+              &:focus {
+                outline: 0;
+                outline-offset: 0;
+              }
+            }
+          }
+          .tripInput {
+            width: 140px;
+            input {
+              width: 95%;
+            }
+          }
+        }
+      }
+    }
+    .lowButtonsFlightsSection {
+      display: flex;
+      margin: 32px 32px 32px 0px;
+      justify-content: end;
+      button:first-child {
+        background-color: transparent;
+        border: transparent;
+        display: flex;
+        font-family: "Montserrat";
+        font-weight: 700;
+        padding: 16px 16px 16px 16px;
+        img {
+          padding-right: 4px;
+        }
+        &:active {
+          transform: scale(0.8, 0.8);
+        }
+      }
+      button:last-child {
+        @extend %button-mint;
+        img {
+          align-items: center;
+          padding-right: 4px;
+        }
+      }
+    }
+  }
+}
+
+.plansOfPlaces {
+  margin: 0 auto;
+  margin-left: 74px;
+  margin-right: 74px;
+
+  .headlineOfPlaces {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      h3 {
+        font-size: 32px;
+        margin: 0px;
+      }
+      p {
+        font-size: 16px;
+        color: gray;
+        margin-top: 16px;
+      }
+    }
+
+    button {
+      @extend %button-mint-border;
+    }
+  }
+  .places {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 390px);
+    column-gap: 32px;
+    row-gap: 32px;
+    img {
+      padding: 16px;
+    }
+
+    > div {
+      background-color: white;
+      ul {
+        display: flex;
+        margin: 0%;
+        padding: 0%;
+
+        li {
+          margin-left: 30px;
+        }
+        li:first-child {
+          list-style-type: none;
+          margin-left: 0px;
+        }
+      }
+      display: flex;
+      box-shadow: 2px 2px 5px 1px rgba(247, 247, 247, 1);
+      border-radius: 10px;
+
+      p {
+        color: rgb(95, 95, 95);
+        font-weight: 700;
+        padding-top: 39px;
+        padding-bottom: 8px;
+        margin: 0px;
+      }
+    }
+  }
+}
+.square {
+  display: flex;
+  margin-left: 74px;
+  margin-top: 70px;
+  flex-direction: row;
+  .hotelsSquare {
+    margin-left: 24px;
+  }
+  > div {
+    color: white;
+    position: relative;
+    width: 46.7%;
+    height: 50vh;
+
+    .title {
+      font-size: 2.5em;
+    }
+    button {
+      @extend %button-mint;
+      margin-top: 16px;
+    }
+    .alignSelf {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+
+      .wrapTextSquare {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+    }
+
+    > div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+      border-radius: 20px;
+    }
+    .bgSquareFlights {
+      background-image: url("../img/FlightsBg.png");
+    }
+
+    .bgSquareHotels {
+      background-image: url("../img/HotelsBg.png");
+    }
+  }
+}
+.reviews {
+  margin-top: 67px;
+  .titleReviews {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 1232px;
+    width: 100%;
+    > div {
+      h3 {
+        font-size: 32px;
+        margin: 0%;
+      }
+      p {
+        margin-top: 16px;
+      }
+    }
+    button {
+      @extend %button-mint-border;
+    }
+  }
+
+  .wrapSlides {
+    display: flex;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    .slides {
+      padding-left: 15%;
+      cursor: pointer;
+      display: inline-flex;
+      overflow: hidden;
+      padding: 40px 2% 25px;
+      .slideWrap {
+        box-sizing: border-box;
+        width: 425px;
+        margin-left: 50px;
+        border-radius: 10px;
+        box-shadow: 20px 25px rgba(141, 211, 187, 0.4);
+        display: flex;
+
+        flex-direction: column;
+        .slideContent {
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.244);
+          border-radius: 10px;
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          .slidePadding {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            > p:first-child {
+              font-size: 24px;
+              font-family: "Gothic";
+            }
+            .relativeParagraph {
+              overflow: hidden;
+              height: 40px;
+            }
+            .buttonViewMore {
+              border: transparent;
+              background-color: transparent;
+              font-family: "Gothic";
+              font-size: 16px;
+              display: flex;
+              justify-content: end;
+              transform: translate(0px, 0px);
+            }
+            .imgDivReviews {
+              flex: 1;
+              display: flex;
+              align-items: flex-end;
+              img {
+                padding-top: 30px;
+                display: flex;
+                align-self: flex-end;
+                max-height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.subscribe {
+  position: relative;
+  bottom: -150px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1232px;
+  background-color: rgba(205, 234, 225, 1);
+  border-radius: 20px;
+  display: flex;
+  padding-left: 24px;
+  justify-content: space-between;
+  > div > p {
+    font-family: "Gothic";
+    font-size: 44px;
+    width: 250px;
+    margin: 0px;
+    padding-top: 24px;
+  }
+  .paragraphWrap {
+    margin-top: 24px;
+    .paragraphSubscribe {
+      margin-top: 8px;
+    }
+    button {
+      background-color: black;
+      color: white;
+      border: 1px solid black;
+      border-radius: 4px;
+      padding: 12px 10px 12px 10px;
+      &:active {
+        transform: scale(0.8, 0.8);
+      }
+    }
+    input {
+      margin-top: 16px;
+      border: solid transparent;
+      border-radius: 4px;
+      padding: 10px 10px 10px 10px;
+      width: 80.8%;
+      &:active,
+      &:hover,
+      &:focus {
+        outline: 0;
+        outline-offset: 0;
+      }
+    }
+  }
+  img {
+    padding-right: 25px;
+  }
+}
+
+footer {
+  background-color: $mint-blue;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 218px;
+  padding-bottom: 64px;
+  .footerWrap {
+    width: 100%;
+    max-width: 1232px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    .listsOfFooter {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 900px;
+      > div {
+        display: flex;
+        width: 100%;
+        max-width: 390px;
+        justify-content: space-between;
+        ul {
+          list-style-type: none;
+          margin: 0%;
+          padding: 0%;
+          li {
+            padding-top: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1375px) {
+  .plansOfPlaces {
+    .wrapPlaces {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .places {
+        display: grid;
+        grid-template-columns: repeat(2, 390px);
+        column-gap: 32px;
+        row-gap: 32px;
+      }
+    }
+  }
+  .square {
+    display: flex;
+    justify-content: center;
+    > div {
+      max-width: 40%;
+      max-height: 40vh;
+    }
+  }
+}
+
+@media screen and (max-width: 1272px) {
+  .subscribe {
+    width: 90%;
+  }
+  .navFlightsBlock {
+    width: 90%;
+    margin: 0 auto;
+    .navFlightsSection {
+      .fieldsets > div {
+        display: flex;
+        justify-content: center;
+        padding-right: 24px;
+        > div {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .square {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .wrapTextSquare {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .hotelsSquare {
+      margin-left: 0px;
+      margin-top: 24px;
+    }
+  }
+  .reviews {
+    .titleReviews {
+      width: 88%;
+    }
+  }
+  .subscribe {
+    position: relative;
+    bottom: -80px;
+    > div {
+      margin: 0 auto;
+      display: flex;
+      .inputButtonSubscribe {
+        margin-bottom: 24px;
+      }
+    }
+    .imgSubscribe {
+      display: none;
+    }
+  }
+  footer {
+    padding-top: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
+    .footerWrap {
+      .imgFooterWrap {
+        margin-right: 30px;
+      }
+      .listsOfFooter {
+        width: 100%;
+        max-width: 700px;
+        > div {
+          display: flex;
+          width: 100%;
+          max-width: 330px;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .plansOfPlaces {
+    .wrapPlaces {
+      .places {
+        display: grid;
+        grid-template-columns: none;
+        ul {
+          padding-right: 20px;
+        }
+        .hidden {
+          display: none;
+        }
+      }
+    }
+  }
+  .square {
+    margin-left: 0px;
+    > div {
+      min-width: 400px;
+      min-height: 400px;
+    }
+  }
+  footer {
+    .listsOfFooter {
+      .secondList {
+        margin-left: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .subscribe {
+    padding-left: 0px;
+    width: 60%;
+    > div > p {
+      width: 200px;
+    }
+    > div {
+      margin: 0 auto;
+      flex-direction: column;
+      align-items: center;
+      padding-right: 24px;
+      padding-left: 24px;
+      .inputButtonSubscribe {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        button {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .footerWrap {
+    align-items: center;
+    flex-direction: column;
+    .listsOfFooter {
+      margin-top: 24px;
+    }
+  }
+}
+@media screen and (max-width: 824px) {
+  header{
+
+   >div:first-child {
+      flex-direction: column;
+      >div:last-child{
+        margin-top: 10px;
+        padding-left: 20px;
+      }
+  } 
+  .headerButtons{
+    width: 120px;
+
+  }
+}
+
+  .navFlightsBlock {
+    width: 47%;
+    min-width: 380px;
+    .navFlightsSection {
+      .fieldsets > div {
+        flex-direction: column;
+      }
+    }
+  }
+footer{
+  .footerWrap{
+    .listsOfFooter{
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      .secondList{
+        margin-top: 24px;
+        margin-left: 0px;
+      }
+       }
+  }
+}
+}
